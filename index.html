@@ -67,8 +67,10 @@ a:hover{color:var(--accent)}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.08em;background:var(--accent);opacity:.25;transform-origin:left;animation:underline 1.1s .5s cubic-bezier(.2,.7,.2,1) both}
 @keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .byline{margin-top:32px;display:flex;align-items:center;gap:14px}
-.avatar{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:italic 400 22px var(--serif);flex:none;position:relative}
-.avatar::after{content:"";position:absolute;right:0;bottom:2px;width:12px;height:12px;border-radius:50%;background:#2f9a57;border:2px solid var(--paper)}
+.avatar{width:72px;height:72px;border-radius:8px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:italic 400 22px var(--serif);flex:none;position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
+.mono-mark.photo{width:32px;height:32px;object-fit:cover;border-radius:6px;background:var(--paper-2)}
+.avatar::after{content:"";position:absolute;right:-3px;bottom:-3px;width:12px;height:12px;border-radius:50%;background:#2f9a57;border:2px solid var(--paper)}
 .byline b{display:block;font-weight:600}
 .byline span{color:var(--ink-2);font-size:14px}
 .lede{font:400 20px/1.55 var(--serif);color:var(--ink);margin:0 0 24px}
@@ -351,7 +353,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
 
 <header class="mast">
   <div class="wrap">
-    <a class="name" href="#top"><span class="mono-mark" aria-hidden="true">N</span>Nirav Shah</a>
+    <a class="name" href="#top"><img class="mono-mark photo" src="img/nirav.jpg" alt="" width="32" height="32">Nirav Shah</a>
     <nav aria-label="Sections">
       <a href="#impact">Yahoo</a><a href="#honeywell">Honeywell</a><a href="#ncsu">NC State</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
       <button class="theme" id="theme" type="button" aria-label="Toggle dark mode">
@@ -371,7 +373,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
     <div>
       <h1>I build data pipelines that cost less, run faster and <em>tell the truth.</em></h1>
       <div class="byline">
-        <div class="avatar" aria-hidden="true">N</div>
+        <div class="avatar"><img src="img/nirav.jpg" alt="Photo of Nirav Shah" width="72" height="72"></div>
         <div><b>Nirav Shah</b><span>Data Engineer II at Yahoo · M.S. CS, NC State</span></div>
       </div>
     </div>
