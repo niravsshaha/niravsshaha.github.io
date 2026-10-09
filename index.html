@@ -77,7 +77,7 @@ a:hover{color:var(--accent)}
 .btn:hover{background:var(--ink);color:var(--paper);transform:translateY(-1px)}
 .btn.solid{background:var(--ink);color:var(--paper)}
 .btn.solid:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-.avail{margin-top:18px;font-size:13px;color:var(--ink-2)}
+.avail{margin-top:18px;font-size:13px;color:var(--ink-2)}.avatar-photo{background:var(--rule) url(img/nirav.webp) 50% 30%/205% auto no-repeat;width:56px;height:56px}.portrait{margin:0 0 28px;width:min(100%,260px);aspect-ratio:4/5;position:relative}.portrait img{display:block;width:100%;height:100%;object-fit:cover;border:1px solid var(--rule)}.portrait::after{content:"";position:absolute;inset:10px -10px -10px 10px;border:1px solid var(--accent);opacity:.35;z-index:-1}@media (max-width:900px){.portrait{width:200px}}
 
 /* numbers */
 .numbers{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule)}
@@ -371,11 +371,12 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
     <div>
       <h1>I build data pipelines that cost less, run faster and <em>tell the truth.</em></h1>
       <div class="byline">
-        <div class="avatar" aria-hidden="true">N</div>
+        <div class="avatar avatar-photo" aria-hidden="true"></div>
         <div><b>Nirav Shah</b><span>Data Engineer II at Yahoo · M.S. CS, NC State</span></div>
       </div>
     </div>
     <div>
+      <figure class="portrait"><img src="img/nirav.webp" alt="Portrait of Nirav Shah" width="480" height="600"></figure>
       <p class="lede">For the past few years I've kept Yahoo's content and audience data flowing: 50+ batch and streaming pipelines, 5 billion events a day. I like the unglamorous wins: a bill that drops 94%, a metric that finally matches reality, an on-call rotation that stays quiet.</p>
       <div class="actions">
         <a class="btn solid" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
