@@ -271,7 +271,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
 .edu2 .gpa span{color:var(--ink-3);font-size:14px}
 .edu2 .note{margin:14px 0 0;color:var(--ink-2);font-size:14px;padding-top:12px;border-top:1px dotted var(--rule)}
 @media (max-width:980px){
-  .gb{grid-template-columns:1fr}.gb-art{min-height:220px;border-right:0;border-bottom:1px solid var(--rule)}
+  .gb{grid-template-columns:1fr}.gb-art{min-height:0;aspect-ratio:5/4;border-right:0;border-bottom:1px solid var(--rule)}
   .cards.two-up,.skgrid,.edu2{grid-template-columns:1fr}
   .skgrid{gap:36px;margin-left:0}
 }
@@ -280,6 +280,17 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
   .groups>div{grid-template-columns:1fr;gap:4px}
   .years td.at{display:none}.years th:nth-child(3){display:none}
 }
+
+.gb-art{background:#40bad4}
+.gb-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center}
+.gb-title{display:flex;align-items:center;gap:12px}
+.gb-title img{width:44px;height:44px;border-radius:50%;flex:none}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover .cover img{transform:scale(1.03)}
+.cover-exp{background:#aa0202}
+.cover-exp img{object-fit:contain;object-position:center}
+.cover-cb{background:linear-gradient(#22252a 50%,#39453b 50%)}
+.cover-cb img{object-fit:contain;object-position:center}
 
 .tip{position:fixed;pointer-events:none;z-index:30;background:var(--ink);color:var(--paper);font:400 12px/1.4 var(--sans);padding:7px 10px;opacity:0;transition:opacity .1s;max-width:240px}
 
@@ -468,24 +479,10 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
     </div>
 
     <article class="gb rv">
-      <div class="gb-art" aria-hidden="true">
-        <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="320" fill="var(--paper-2)"/>
-          <g stroke="var(--rule)" stroke-width="1"><circle cx="150" cy="190" r="120" fill="none"/><circle cx="150" cy="190" r="80" fill="none"/></g>
-          <path d="M60 180h180a90 90 0 01-180 0z" fill="var(--card)" stroke="var(--ink)" stroke-width="1.6"/>
-          <path d="M84 180c14-26 44-34 60-14s44 10 60-10" fill="none" stroke="var(--ink)" stroke-width="1.6"/>
-          <circle cx="116" cy="168" r="10" fill="var(--accent)"/><circle cx="170" cy="164" r="7" fill="var(--accent)" opacity=".55"/><circle cx="196" cy="172" r="5" fill="var(--ink)"/>
-          <rect x="262" y="56" width="98" height="196" rx="16" fill="var(--card)" stroke="var(--ink)" stroke-width="1.6"/>
-          <rect x="276" y="82" width="70" height="44" fill="var(--accent)"/>
-          <path d="M305 96l14 8-14 8z" fill="#fff"/>
-          <g stroke="var(--ink)" stroke-width="1.4"><path d="M276 142h70M276 156h52M276 170h62"/></g>
-          <g fill="none" stroke="var(--ink)" stroke-width="1.4"><rect x="276" y="186" width="30" height="26"/><rect x="316" y="186" width="30" height="26"/></g>
-          <rect x="276" y="222" width="70" height="14" rx="7" fill="var(--ink)"/>
-        </svg>
-      </div>
+      <div class="gb-art"><img src="img/goodbowls.jpg" alt="Good Bowls app screens: meal plan, home screen and goals" loading="lazy" width="1200" height="960"></div>
       <div class="gb-body">
         <div class="gb-top"><span class="role">Research Assistant · NC State</span><span class="pill">Live on Google Play</span></div>
-        <h3>Good Bowls</h3>
+        <h3 class="gb-title"><img src="img/goodbowls-icon.png" alt="" width="44" height="44">Good Bowls</h3>
         <p class="gb-lede">A nutrition and cooking app published by North Carolina State University. I built the Flutter mobile app and the React admin dashboard behind it.</p>
         <div class="gb-cols">
           <div>
@@ -512,13 +509,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
 
     <div class="cards two-up">
       <article class="card rv">
-        <div class="cover" aria-hidden="true">
-          <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
-            <rect width="320" height="150" fill="var(--paper-2)"/>
-            <g stroke="var(--ink-3)" stroke-width="1.2" stroke-dasharray="3 4"><path d="M160 75L90 40M160 75L230 40M160 75L90 112M160 75L230 112M90 40L230 40M90 112L230 112"/></g>
-            <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"><circle cx="90" cy="40" r="13"/><circle cx="230" cy="40" r="13"/><circle cx="90" cy="112" r="13"/><circle cx="230" cy="112" r="13"/></g>
-            <circle cx="160" cy="75" r="19" fill="var(--accent)"/><path d="M151 75l6 6 12-13" fill="none" stroke="#fff" stroke-width="2.5"/>
-          </svg>
+        <div class="cover cover-exp"><img src="img/expertiza.jpg" alt="Expertiza logo" loading="lazy" width="1200" height="560">
           <span class="badge">Open source</span>
         </div>
         <div class="body">
@@ -531,14 +522,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
         </div>
       </article>
       <article class="card rv">
-        <div class="cover" aria-hidden="true">
-          <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice">
-            <rect width="320" height="150" fill="var(--paper-2)"/>
-            <g stroke="var(--rule)" stroke-width="1"><path d="M0 30h320M0 70h320M0 110h320M60 0v150M120 0v150M180 0v150M240 0v150M300 0v150"/></g>
-            <path d="M20 130C80 120 90 60 150 68s90-44 150-36" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
-            <g fill="var(--card)" stroke="var(--ink)" stroke-width="1.5"><circle cx="90" cy="94" r="6"/><circle cx="214" cy="54" r="6"/></g>
-            <path d="M150 34a15 15 0 00-15 15c0 12 15 26 15 26s15-14 15-26a15 15 0 00-15-15z" fill="var(--accent)"/><circle cx="150" cy="49" r="5" fill="var(--paper-2)"/>
-          </svg>
+        <div class="cover cover-cb"><img src="img/citybyte.jpg" alt="CityByte city page for New York City" loading="lazy" width="1200" height="631">
           <span class="badge">Course project</span>
         </div>
         <div class="body">
