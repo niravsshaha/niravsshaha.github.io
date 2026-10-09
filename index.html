@@ -67,10 +67,10 @@ a:hover{color:var(--accent)}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.08em;background:var(--accent);opacity:.25;transform-origin:left;animation:underline 1.1s .5s cubic-bezier(.2,.7,.2,1) both}
 @keyframes underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .byline{margin-top:32px;display:flex;align-items:center;gap:14px}
-.avatar{width:72px;height:72px;border-radius:8px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:italic 400 22px var(--serif);flex:none;position:relative}
-.avatar img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
-.mono-mark.photo{width:32px;height:32px;object-fit:cover;border-radius:6px;background:var(--paper-2)}
-.avatar::after{content:"";position:absolute;right:-3px;bottom:-3px;width:12px;height:12px;border-radius:50%;background:#2f9a57;border:2px solid var(--paper)}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:italic 400 22px var(--serif);flex:none;position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.mono-mark.photo{width:32px;height:32px;object-fit:cover;border-radius:3px;background:var(--paper-2)}
+.avatar::after{content:"";position:absolute;right:2px;bottom:2px;width:12px;height:12px;border-radius:50%;background:#2f9a57;border:2px solid var(--paper)}
 .byline b{display:block;font-weight:600}
 .byline span{color:var(--ink-2);font-size:14px}
 .lede{font:400 20px/1.55 var(--serif);color:var(--ink);margin:0 0 24px}
