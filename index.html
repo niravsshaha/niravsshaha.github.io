@@ -248,15 +248,17 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
 .card .body .kicker{font-size:10px}
 
 /* skills table */
-.skgrid{display:grid;grid-template-columns:1fr;gap:44px;max-width:820px;margin-left:260px}
+.skgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;margin-left:260px;align-items:start}
 .years{width:100%;border-collapse:collapse}
 .years th{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:0 0 10px;border-bottom:1px solid var(--rule-strong)}
 .years td{padding:13px 12px 13px 0;border-bottom:1px solid var(--rule);font-size:15px;vertical-align:baseline}
 .years td.y{white-space:nowrap;color:var(--ink-2);font-size:14px}
 .years td.y b{font:400 24px var(--serif);color:var(--ink);letter-spacing:-.01em;margin-right:2px}
 .years td.at{color:var(--ink-3);font-size:13px}
-.groups{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--rule-strong)}
-.groups>div{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.groups{display:grid;grid-template-columns:1fr;gap:0}
+.groups>div:first-of-type{border-top:1px solid var(--rule-strong)}
+.groups>div{display:grid;grid-template-columns:1fr;gap:4px;padding:11px 0 12px;border-bottom:1px solid var(--rule)}
+.groups-h{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-bottom:10px}
 .groups p{margin:0;color:var(--ink-2);font-size:15px}
 
 /* education */
@@ -595,16 +597,17 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
     </div>
     <div class="skgrid rv">
       <table class="years">
-        <thead><tr><th>Area</th><th>Experience</th></tr></thead>
+        <thead><tr><th>Area / expertise</th><th>Experience</th></tr></thead>
         <tbody id="years"></tbody>
       </table>
-      <div class="groups">
+      <div><div class="groups-h">Skills</div><div class="groups">
         <div><div class="kicker">Languages</div><p>Python, SQL, Java, JavaScript, C, C++</p></div>
         <div><div class="kicker">Cloud</div><p>GCP (BigQuery, Dataflow, Composer, Spanner, Pub/Sub, Dataproc), Azure (Databricks, Data Lake), AWS</p></div>
         <div><div class="kicker">Data engineering</div><p>Airflow, Spark, Apache Beam, Kafka, Storm, Hive, Hadoop, BigQuery ML, ETL/ELT</p></div>
         <div><div class="kicker">DevOps</div><p>Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, CI/CD, pytest</p></div>
         <div><div class="kicker">BI &amp; monitoring</div><p>Looker (LookML), Tableau, Power BI, OpsGenie, Rootly, BigPanda</p></div>
         <div><div class="kicker">App development</div><p>React, Flutter, Django, Ruby on Rails, REST APIs</p></div>
+      </div>
       </div>
     </div>
   </section>
