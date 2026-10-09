@@ -45,7 +45,7 @@ a:hover{color:var(--accent)}
 /* masthead */
 .mast{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--rule)}
 .mast .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;height:60px}
-.mast .name{font:600 15px var(--sans);letter-spacing:-.01em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.mast .name{font:600 21px var(--sans);letter-spacing:-.01em;text-decoration:none;display:flex;align-items:center;gap:10px}
 .mono-mark{width:28px;height:28px;background:var(--accent);color:#fff;display:grid;place-items:center;font:500 16px var(--serif)}
 .mast nav{display:flex;gap:4px;align-items:center;font-size:13px}
 .mast nav a{text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:999px;transition:background .15s,color .15s}
@@ -71,7 +71,7 @@ a:hover{color:var(--accent)}
 .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .mono-mark.photo{width:32px;height:32px;object-fit:cover;border-radius:3px;background:var(--paper-2)}
 .avatar::after{content:"";position:absolute;right:2px;bottom:2px;width:12px;height:12px;border-radius:50%;background:#2f9a57;border:2px solid var(--paper)}
-.byline b{display:block;font-weight:600}
+.byline b{display:block;font-weight:600;font-size:20px;line-height:1.25}
 .byline span{color:var(--ink-2);font-size:14px}
 .lede{font:400 20px/1.55 var(--serif);color:var(--ink);margin:0 0 24px}
 .actions{display:flex;flex-wrap:wrap;gap:10px}
@@ -353,7 +353,7 @@ figcaption{font-size:12px;color:var(--ink-3);margin-top:10px;border-top:1px soli
 
 <header class="mast">
   <div class="wrap">
-    <a class="name" href="#top"><img class="mono-mark photo" src="img/nirav.jpg" alt="" width="32" height="32">Nirav Shah</a>
+    <a class="name" href="#top">Nirav Shah</a>
     <nav aria-label="Sections">
       <a href="#impact">Yahoo</a><a href="#honeywell">Honeywell</a><a href="#ncsu">NC State</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
       <button class="theme" id="theme" type="button" aria-label="Toggle dark mode">
